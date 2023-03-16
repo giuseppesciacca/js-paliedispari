@@ -60,7 +60,7 @@ function isEven(sum) {
 if ((userChoice.toLocaleLowerCase() == 'pari') && (isEven(result) == true) || (userChoice.toLocaleLowerCase() == 'dispari' && isEven(result) == false)) {
     console.log(`Hai detto ${userChoice.toLocaleLowerCase()} ed hai vinto! ${result} è ${userChoice.toLocaleLowerCase()}`);
 } else if ((userChoice.toLocaleLowerCase() == 'dispari') && (isEven(result) == true) || (userChoice.toLocaleLowerCase() == 'pari' && isEven(result) == false)) {
-    console.log(`Hai detto ${userChoice.toLocaleLowerCase()} ma hai perso. ${result} è ${userChoice.toLocaleLowerCase()}`);
+    console.log(`Hai detto ${userChoice.toLocaleLowerCase()} ma hai perso. ${result} NON è ${userChoice.toLocaleLowerCase()}`);
 } else {
     console.log('Sarebbe il caso che scegliessi "pari" o "dispari" per poter giocare');
 };
