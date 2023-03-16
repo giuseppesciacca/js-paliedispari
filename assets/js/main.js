@@ -20,11 +20,14 @@ function isPalindrome(word) {
 const word = prompt('Inserisci una parola e vediamo se è palindroma!').toLocaleLowerCase();
 
 if (word == '') {
-    console.log('Beh! forse uno spazio vuoto è palindromo ma prova ad inserire una parola!');
+    console.log('Beh! forse uno spazio vuoto è palindromo, ma prova ad inserire una parola!');
+    alert('Beh! forse uno spazio vuoto è palindromo, ma prova ad inserire una parola!')
 } else if (isPalindrome(word)) {
     console.log('WOW! si è palindroma!');
+    alert('WOW! si è palindroma!')
 } else {
     console.log('Eh no, non è palindroma');
+    alert('Eh no, non è palindroma')
 };
 
 //Pari e Dispari
@@ -44,6 +47,7 @@ function randomNum(min, max) {
 const botNumber = randomNum(1, 5);
 
 console.log('Il pc ha tirato ' + botNumber);
+alert(`Il pc ha tirato ${botNumber}`);
 
 //Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 
@@ -62,8 +66,11 @@ function isEven(sum) {
 
 if ((userChoice == 'pari') && (isEven(result) == true) || (userChoice == 'dispari' && isEven(result) == false)) {
     console.log(`Hai detto ${userChoice} ed hai vinto! ${result} è ${userChoice}`);
+    alert(`Hai detto ${userChoice} ed hai vinto! ${result} è ${userChoice}`);
 } else if ((userChoice == 'dispari') && (isEven(result) == true) || (userChoice == 'pari' && isEven(result) == false)) {
     console.log(`Hai detto ${userChoice} ma hai perso. ${result} NON è ${userChoice}`);
+    alert(`Hai detto ${userChoice} ma hai perso. ${result} NON è ${userChoice}`);
 } else {
     console.log('Sarebbe il caso che scegliessi "pari" o "dispari" per poter giocare');
+    alert('Sarebbe il caso che scegliessi "pari" o "dispari" per poter giocare');
 };
