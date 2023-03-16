@@ -4,6 +4,7 @@ Pari e Dispari
 L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto. */
 
 // Palidroma
+console.log('*****Palindrome*****');
 //Creare una funzione per capire se la parola inserita è palindroma
 
 function isPalindrome(word) {
@@ -16,18 +17,20 @@ function isPalindrome(word) {
 };
 
 //Chiedere all’utente di inserire una parola 
-const word = prompt('Inserisci una parola e vediamo se è palindroma!');
+const word = prompt('Inserisci una parola e vediamo se è palindroma!').toLocaleLowerCase();
 
-if (isPalindrome(word)) {
-    console.log('wow! si è palindroma!');
+if (word == '') {
+    console.log('Beh! forse uno spazio vuoto è palindromo ma prova ad inserire una parola!');
+} else if (isPalindrome(word)) {
+    console.log('WOW! si è palindroma!');
 } else {
-    console.log('eh no, non è palindroma');
+    console.log('Eh no, non è palindroma');
 };
 
-
 //Pari e Dispari
+console.log('*****Pari e Dispari*****');
 //L’utente sceglie pari o dispari e // inserisce un numero da 1 a 5
-const userChoice = prompt('pari o dispari?');
+const userChoice = prompt('pari o dispari?').toLocaleLowerCase();
 const userNumber = Number(prompt('Tira un numero da 1 a 5:'));
 
 console.log(`Hai scelto ${userChoice}`);
@@ -57,10 +60,10 @@ function isEven(sum) {
 
 //Dichiariamo chi ha vinto.
 
-if ((userChoice.toLocaleLowerCase() == 'pari') && (isEven(result) == true) || (userChoice.toLocaleLowerCase() == 'dispari' && isEven(result) == false)) {
-    console.log(`Hai detto ${userChoice.toLocaleLowerCase()} ed hai vinto! ${result} è ${userChoice.toLocaleLowerCase()}`);
-} else if ((userChoice.toLocaleLowerCase() == 'dispari') && (isEven(result) == true) || (userChoice.toLocaleLowerCase() == 'pari' && isEven(result) == false)) {
-    console.log(`Hai detto ${userChoice.toLocaleLowerCase()} ma hai perso. ${result} NON è ${userChoice.toLocaleLowerCase()}`);
+if ((userChoice == 'pari') && (isEven(result) == true) || (userChoice == 'dispari' && isEven(result) == false)) {
+    console.log(`Hai detto ${userChoice} ed hai vinto! ${result} è ${userChoice}`);
+} else if ((userChoice == 'dispari') && (isEven(result) == true) || (userChoice == 'pari' && isEven(result) == false)) {
+    console.log(`Hai detto ${userChoice} ma hai perso. ${result} NON è ${userChoice}`);
 } else {
     console.log('Sarebbe il caso che scegliessi "pari" o "dispari" per poter giocare');
 };
