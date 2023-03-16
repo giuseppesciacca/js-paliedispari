@@ -22,6 +22,9 @@ const word = prompt('Inserisci una parola e vediamo se è palindroma!').toLocale
 if (word == '') {
     console.log('Beh! forse uno spazio vuoto è palindromo, ma prova ad inserire una parola!');
     alert('Beh! forse uno spazio vuoto è palindromo, ma prova ad inserire una parola!')
+} else if (word.length == 1) {
+    console.log('Eddaje magari 2 lettere inseriamole, su!');
+    alert('Eddaje magari 2 lettere inseriamole, su!')
 } else if (isPalindrome(word)) {
     console.log('WOW! si è palindroma!');
     alert('WOW! si è palindroma!')
