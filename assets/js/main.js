@@ -59,21 +59,21 @@ console.log('La somma dei numeri è ' + result);
 
 function isEven(sum) {
     if (sum % 2 == 0) {
-        return true;
+        return 'pari';
     } else {
-        return false;
+        return 'dispari';
     };
 };
 
 //Dichiariamo chi ha vinto.
 
-if ((userChoice == 'pari') && (isEven(result) == true) || (userChoice == 'dispari' && isEven(result) == false)) {
+if (userChoice == isEven(result)) {
     console.log(`Hai detto ${userChoice} ed hai vinto! ${result} è ${userChoice}`);
-    alert(`Hai detto ${userChoice} ed hai vinto! ${result} è ${userChoice}`);
-} else if ((userChoice == 'dispari') && (isEven(result) == true) || (userChoice == 'pari' && isEven(result) == false)) {
+    alert(`Hai detto ${userChoice} ed hai vinto! ${result} è ${userChoice}`)
+} else if (userChoice != isEven(result)) {
     console.log(`Hai detto ${userChoice} ma hai perso. ${result} NON è ${userChoice}`);
     alert(`Hai detto ${userChoice} ma hai perso. ${result} NON è ${userChoice}`);
 } else {
     console.log('Sarebbe il caso che scegliessi "pari" o "dispari" per poter giocare');
     alert('Sarebbe il caso che scegliessi "pari" o "dispari" per poter giocare');
-};
+}
